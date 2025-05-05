@@ -279,7 +279,7 @@
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background: url("/assets/rainbg.png");
+    background: url("/project-hamster/assets/rainbg.png");
     animation: rain 0.5s linear infinite;
 }
 

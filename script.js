@@ -20,14 +20,14 @@ var isL = 0
 function toggle() {
     if (isToggle == 0) {
         isToggle = 1
-        togglebtn.src = "/assets/closemenu.png"
+        togglebtn.src = "/project-hamster/assets/closemenu.png"
         start.style.display = "block"
         if(isL){
             rain.style.display = "block"
         }else  rain.style.display = "none"
     } else {
         isToggle = 0
-        togglebtn.src = "/assets/menu.png"
+        togglebtn.src = "/project-hamster/assets/menu.png"
         start.style.display = "none"
         rain.style.display = "none"
     }
@@ -36,19 +36,19 @@ function toggle() {
 function startToggle() {
     if (isStart == 0) {
         isStart = 1
-        start.src = "/assets/stop.png"
+        start.src = "/project-hamster/assets/stop.png"
         cloud1.style.opacity = "100%"
         cloud2.style.opacity = "100%"
         setTimeout(ligth, 2000)
     } else {
         location.reload()
         isStart = 0
-        start.src = "/assets/start.png"
+        start.src = "/project-hamster/assets/start.png"
     }
 }
 
 function ligth() {
-    bg.src = "/assets/firebg.png"
+    bg.src = "/project-hamster/assets/firebg.png"
     l1.style.opacity = "100%"
     l1.style.animation = "lightning 0.5s forwards"
     l2.style.opacity = "100%"
@@ -69,7 +69,7 @@ function popcloud() {
 var interVal
 
 function stand() {
-    people.src = "/assets/people.png"
+    people.src = "/project-hamster/assets/people.png"
     people.style.width = "250px"
     people.style.height = "250px"
     people.style.top = "75%"
@@ -84,10 +84,10 @@ function prerun() {
     people.style.width = "200px"
     people.style.height = "200px"
     if (isLeft == 0) {
-        people.src = "/assets/run1.png"
+        people.src = "/project-hamster/assets/run1.png"
         isLeft = 1
     } else {
-        people.src = "/assets/run2.png"
+        people.src = "/project-hamster/assets/run2.png"
         isLeft = 0
     }
     people.style.left = "56%"
@@ -105,10 +105,10 @@ function run() {
         clearInterval(interVal)
     }
     if (isLeft == 0) {
-        people.src = "/assets/run1.png"
+        people.src = "/project-hamster/assets/run1.png"
         isLeft = 1
     } else {
-        people.src = "/assets/run2.png"
+        people.src = "/project-hamster/assets/run2.png"
         isLeft = 0
     }
     dist += 5
@@ -125,10 +125,10 @@ function run2() {
         location.reload()
     }
     if (isLeft == 0) {
-        people.src = "/assets/run1.png"
+        people.src = "/project-hamster/assets/run1.png"
         isLeft = 1
     } else {
-        people.src = "/assets/run2.png"
+        people.src = "/project-hamster/assets/run2.png"
         isLeft = 0
     }
     dist2 += 5
@@ -144,10 +144,10 @@ function rainToggle() {
         rainaudio.play()
         rainbg.style.display = "block"
         setTimeout(() => {
-            bg.src = "/assets/bg.png"
+            bg.src = "/project-hamster/assets/bg.png"
         }, 1000)
         isRain = 1
-        campfire.src = "/assets/camp.png"
+        campfire.src = "/project-hamster/assets/camp.png"
         campfire.style.top = "81%"
         people.style.transition = "0s"
         speaker.style.transition = "0s"
