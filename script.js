@@ -22,15 +22,22 @@ function toggle() {
         isToggle = 1
         togglebtn.src = "/assets/closemenu.png"
         start.style.display = "block"
-        if(isL){
+        if (isL) {
             rain.style.display = "block"
-        }else  rain.style.display = "none"
+        } else rain.style.display = "none"
     } else {
         isToggle = 0
         togglebtn.src = "/assets/menu.png"
         start.style.display = "none"
         rain.style.display = "none"
     }
+}
+
+function disT() {
+    isToggle = 0
+    togglebtn.src = "/assets/menu.png"
+    start.style.display = "none"
+    rain.style.display = "none"
 }
 
 function startToggle() {
@@ -40,6 +47,7 @@ function startToggle() {
         cloud1.style.opacity = "100%"
         cloud2.style.opacity = "100%"
         setTimeout(ligth, 2000)
+        disT()
     } else {
         location.reload()
         isStart = 0
@@ -96,7 +104,7 @@ function prerun() {
 
 }
 
-function prerun2(){
+function prerun2() {
     setInterval(run2, 250)
 }
 
@@ -121,7 +129,7 @@ var dist2 = 0
 function run2() {
     people.style.transition = "0.5s"
     speaker.style.transition = "0.5s"
-    if(dist2 >= 45) {
+    if (dist2 >= 45) {
         location.reload()
     }
     if (isLeft == 0) {
@@ -153,8 +161,8 @@ function rainToggle() {
         speaker.style.transition = "0s"
         people.style.left = "-10%"
         speaker.style.left = "-9%"
-        setTimeout(prerun2,2000)
-        
+        setTimeout(prerun2, 2000)
+        disT()
     } else {
         rainbg.style.display = "none"
         isRain = 0
