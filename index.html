@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRE PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <img id="bg" class="bg" src="/FIRE VOLCANO/assets/bg.png">
+        <img id="toggle-btn" src="/FIRE VOLCANO/assets/menu.png" onclick="toggle()">
+        <img id="people" src="/FIRE VOLCANO/assets/sit.png" alt="">
+        <img id="campfire" src="/FIRE VOLCANO/assets/campfire.png" alt="">
+        <img id="start" src="/FIRE VOLCANO/assets/start.png" onclick="startToggle()">
+        <img id="rain" src="/FIRE VOLCANO/assets/rain.png" onclick="rainToggle()">
+        <img id="cloud1" class="cloud" src="/FIRE VOLCANO/assets/cloud.png">
+        <img id="cloud2" class="cloud" src="/FIRE VOLCANO/assets/cloud.png">
+        <img id="l1" src="/FIRE VOLCANO/assets/l.png">
+        <img id="l2" src="/FIRE VOLCANO/assets/l.png">
+        <img id="speaker" src="/FIRE VOLCANO//assets/speaker.svg" onclick="toggleYouTubeUI()">
+        <div id="music" class="music">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div id="rain-container"></div>
+        <audio id="rain-audio" src="/FIRE VOLCANO/assets/audio/rain.mp3"></audio>
+        <audio id="thunder-audio" src="/FIRE VOLCANO/assets/audio/thunder.mp3"></audio>
+    </div>
+    <div id="youtube-player-ui" class="youtube-ui">
+        <input type="text" id="youtubeUrl" placeholder="วางลิงก์ YouTube" />
+        <button onclick="loadYouTube()">เล่น</button>
+        <button onclick="togglePlayPause()">เล่น/หยุด</button>
+        <button onclick="muteToggle()">เปิด/ปิดเสียง</button>
+        <input type="range" id="seekBar" value="0" step="1" min="0" max="100" />
+        <label for="volumeBar">ระดับเสียง</label>
+        <input type="range" id="volumeBar" min="0" max="100" value="100" />
+    </div>
+    <div id="yt-player" class="yt-player"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
